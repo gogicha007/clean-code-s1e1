@@ -54,7 +54,7 @@ var addTask = function(){
 
 //Edit an existing task.
 
-var editTask=function(){
+var editTask = function() {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
 
@@ -66,11 +66,11 @@ var editTask=function(){
     var editBtn = listItem.querySelector(".edit");
     var containsClass = listItem.classList.contains("editMode");
     //If class of the parent is .editmode
-    if(containsClass){
+    if(containsClass) {
         //switch to .editmode
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
-    }else{
+    } else {
         editInput.value = label.innerText;
         editBtn.innerText = "Save";
     }
@@ -80,7 +80,7 @@ var editTask=function(){
 };
 
 
-var deleteTask=function(){
+var deleteTask = function() {
     console.log("Delete Task...");
 
     var listItem = this.parentNode;
@@ -90,18 +90,18 @@ var deleteTask=function(){
 
 
 //Mark task completed
-var taskCompleted=function(){
+var taskCompleted = function() {
     console.log("Complete Task...");
 
     //Append the task list item to the #completed-tasks
-    var listItem=this.parentNode;
+    var listItem = this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
 }
 
 
-var taskIncomplete=function(){
+var taskIncomplete = function() {
     console.log("Incomplete Task...");
     //Mark task as incomplete.
     //When the checkbox is unchecked
@@ -117,8 +117,8 @@ var ajaxRequest=function(){
 
 //Set the click handler to the addTask function.
 addButton.onclick=addTask;
-addButton.addEventListener("click",addTask);
-addButton.addEventListener("click",ajaxRequest);
+addButton.addEventListener("click", addTask);
+addButton.addEventListener("click", ajaxRequest);
 
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){

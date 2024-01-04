@@ -67,7 +67,7 @@ input, button {
 .task {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 .heading {
     display: blok;
@@ -107,21 +107,21 @@ input, button {
     font-size: 18px;
     width: 226px;
 }
-.task-list > .text-input  {
-    width: 226px
+.task-list .text-input  {
+    width: 226px;
 }
-.delete img {
+.delete-img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
-.delete img:hover {
+.delete-img:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
-#complete-tasks label {
-    text-decoration: line-through
+#complete-tasks .task-list__label {
+    text-decoration: line-through;
     color: #888;
 }
 
