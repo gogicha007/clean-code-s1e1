@@ -58,7 +58,6 @@ var editTask = function() {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
 
-
     var listItem = this.parentNode;
 
     var editInput = listItem.querySelector("input[type=text]");
